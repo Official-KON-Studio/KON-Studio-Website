@@ -4,7 +4,7 @@
       "id": 1,
       "category": "concept",
       "image": "../ART GALLERY/Level_1.png",
-      "title": "Castle Wars: Epic Battle",
+      "title": "Level 1 - First Encounter",
       "description": "Concept Art • Castle Wars",
       "downloadable": true
     },
@@ -12,7 +12,7 @@
       "id": 2,
       "category": "concept",
       "image": "../ART GALLERY/Level_10.png",
-      "title": "Kingdom Fortress Design",
+      "title": "Level 10 - Final Showdown",
       "description": "Concept Art • Castle Wars",
       "downloadable": true
     },
@@ -20,24 +20,24 @@
       "id": 3,
       "category": "characters",
       "image": "../ART GALLERY/castle1.png",
-      "title": "Hero Character Sheet",
+      "title": "Players Castle",
       "description": "Character Design • Castle Wars",
       "downloadable": true
     },
     {
       "id": 4,
       "category": "characters",
-      "image": "../ART GALLERY/Screenshot 2025-09-02 150620.png",
-      "title": "Mage Class Design",
-      "description": "Character Design • Dungeon Crawler X",
+      "image": "../ART GALLERY/Enemy-Casstle.png",
+      "title": "Enemy Castle",
+      "description": "Character Design • Castle Wars",
       "downloadable": true
     },
     {
       "id": 5,
       "category": "characters",
       "image": "../ART GALLERY/logo.jpg",
-      "title": "Enemy Collection Vol. 1",
-      "description": "Character Design • Multiple Games",
+      "title": "The Icon of the Game",
+      "description": "Game Logo • Castle Wars",
       "downloadable": true
     },
     {
