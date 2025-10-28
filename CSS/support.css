@@ -1,0 +1,199 @@
+/* ==================== SUPPORT PAGE STYLES ==================== */
+#support-intro {
+    background: var(--bg-primary);
+    padding: 3rem 5%;
+}
+
+.support-intro-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-secondary);
+    border: 6px solid var(--border-primary);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+.support-intro-container h2 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.support-intro-container p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+#support-methods {
+    background: var(--bg-secondary);
+    padding: 5rem 5%;
+}
+
+.support-methods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.support-method {
+    background: var(--bg-card);
+    border: 5px solid var(--border-tertiary);
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.support-method:hover {
+    border-color: var(--text-primary);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--border-primary);
+}
+
+.support-icon {
+    font-size: 4rem;
+    display: block;
+    margin-bottom: 1.5rem;
+}
+
+.support-method h3 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 var(--shadow-color);
+}
+
+.support-method p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+#other-ways {
+    background: var(--bg-primary);
+    padding: 5rem 5%;
+}
+
+.other-ways-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.other-ways-container > p {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.3rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.other-ways-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.other-way-item {
+    background: var(--bg-card);
+    border: 5px solid var(--border-tertiary);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.2s;
+    box-shadow: 4px 4px 0 var(--shadow-color);
+}
+
+.other-way-item:hover {
+    border-color: var(--accent-primary);
+    transform: translate(-3px, -3px);
+    box-shadow: 7px 7px 0 var(--border-primary);
+}
+
+.other-way-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.other-way-item h3 {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.other-way-item p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+#thank-you {
+    background: var(--bg-secondary);
+    padding: 5rem 5%;
+}
+
+.thank-you-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem;
+    background: var(--bg-card);
+    border: 6px solid var(--accent-primary);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+.thank-you-container h2 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.thank-you-content p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.team-signatures {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 4px solid var(--border-tertiary);
+}
+
+.team-signatures p {
+    color: var(--text-primary);
+    font-size: 1.3rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.team-signatures em {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 700;
+}

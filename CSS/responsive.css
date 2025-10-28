@@ -1,0 +1,100 @@
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 2rem 1rem;
+    }
+
+    .hero-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-logo-large {
+        max-width: 150px;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .about-content,
+    .featured-content {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .side-panel {
+        width: 250px;
+    }
+
+    .menu-toggle,
+    .scroll-top,
+    .theme-selector {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+
+    .theme-dropdown {
+        right: 10px;
+        top: 80px;
+        min-width: 180px;
+    }
+
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        padding: 2rem;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .filter-tabs {
+        flex-direction: column;
+    }
+
+    .filter-tab {
+        width: 100%;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+    }
+
+    .news-date {
+        margin: 0 auto;
+    }
+
+    .support-methods-grid,
+    .other-ways-grid {
+        grid-template-columns: 1fr;
+    }
+}

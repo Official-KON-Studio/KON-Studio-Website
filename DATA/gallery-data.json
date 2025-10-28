@@ -1,0 +1,63 @@
+{
+  "officialArt": [
+    {
+      "id": 1,
+      "category": "concept",
+      "image": "../ART GALLERY/Level_1.png",
+      "title": "Castle Wars: Epic Battle",
+      "description": "Concept Art • Castle Wars",
+      "downloadable": true
+    },
+    {
+      "id": 2,
+      "category": "concept",
+      "image": "../ART GALLERY/Level_10.png",
+      "title": "Kingdom Fortress Design",
+      "description": "Concept Art • Castle Wars",
+      "downloadable": true
+    },
+    {
+      "id": 3,
+      "category": "characters",
+      "image": "../ART GALLERY/castle1.png",
+      "title": "Hero Character Sheet",
+      "description": "Character Design • Castle Wars",
+      "downloadable": true
+    },
+    {
+      "id": 4,
+      "category": "characters",
+      "image": "../ART GALLERY/Screenshot 2025-09-02 150620.png",
+      "title": "Mage Class Design",
+      "description": "Character Design • Dungeon Crawler X",
+      "downloadable": true
+    },
+    {
+      "id": 5,
+      "category": "characters",
+      "image": "../ART GALLERY/logo.jpg",
+      "title": "Enemy Collection Vol. 1",
+      "description": "Character Design • Multiple Games",
+      "downloadable": true
+    },
+    {
+      "id": 6,
+      "category": "environments",
+      "image": "🌆",
+      "title": "Neon City Landscape",
+      "description": "Environment • Neon Nights",
+      "downloadable": true,
+      "isEmoji": true
+    }
+  ],
+  "fanArt": [
+    {
+      "id": 1,
+      "category": "fanart",
+      "image": "../ART GALLERY/LOGO-HD.png",
+      "title": "Waiting For You",
+      "description": "Be Number One",
+      "downloadable": false
+    }
+  ]
+}

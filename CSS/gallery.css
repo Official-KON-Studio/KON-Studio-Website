@@ -1,0 +1,229 @@
+/* ==================== FILTER TABS ==================== */
+#gallery-filters,
+#news-filters {
+    background: var(--bg-secondary);
+    padding: 2rem 5%;
+    border-bottom: 4px solid var(--border-tertiary);
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.filter-tab {
+    background: var(--bg-card);
+    border: 4px solid var(--border-tertiary);
+    color: var(--text-secondary);
+    padding: 1rem 2rem;
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.filter-tab:hover {
+    background: var(--accent-secondary);
+    color: var(--text-primary);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--shadow-color);
+}
+
+.filter-tab.active {
+    background: var(--accent-primary);
+    color: var(--text-primary);
+    border-color: var(--text-primary);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--border-primary);
+}
+
+/* ==================== GALLERY STYLES ==================== */
+#official-gallery,
+#fanart-gallery {
+    background: var(--bg-primary);
+    padding: 5rem 5%;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.gallery-item {
+    background: var(--bg-card);
+    border: 5px solid var(--border-tertiary);
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    position: relative;
+}
+
+.gallery-item:hover {
+    border-color: var(--text-primary);
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0 var(--border-primary);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 300px;
+    background: var(--accent-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--text-primary);
+    border-bottom: 5px solid var(--border-tertiary);
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-Art{
+    width: 95%;
+    height: 95%;
+    object-fit: scale;
+}
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-download {
+    background: var(--accent-primary);
+    border: 3px solid var(--text-primary);
+    color: var(--text-primary);
+    padding: 1rem 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 1rem;
+}
+
+.gallery-download:hover {
+    background: var(--text-primary);
+    color: var(--accent-primary);
+    transform: scale(1.05);
+}
+
+.gallery-info {
+    padding: 1.5rem;
+}
+
+.gallery-info h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gallery-info p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.fanart-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 4px solid var(--border-primary);
+}
+
+.fanart-intro p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 2;
+    font-weight: 600;
+}
+
+.fanart-item {
+    border-color: var(--border-secondary);
+}
+
+.fanart-submit {
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-secondary);
+    border: 5px solid var(--accent-primary);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+    margin-top: 3rem;
+}
+
+.fanart-submit h3 {
+    color: var(--text-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.fanart-submit p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+#gallery-support {
+    background: var(--bg-secondary);
+    padding: 5rem 5%;
+}
+
+.support-cta-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--bg-card);
+    border: 6px solid var(--border-primary);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+}
+
+.support-cta-box h2 {
+    color: var(--text-primary);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 0 var(--shadow-color);
+}
+
+.support-cta-box p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    line-height: 2;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}

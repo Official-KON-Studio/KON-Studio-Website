@@ -1,0 +1,25 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "date": {
+        "day": "15",
+        "month": "OCT"
+      },
+      "category": "updates",
+      "title": "Castle Wars Update 1.2 Coming Soon!",
+      "tag": "Game Update",
+      "content": [
+        "Get ready for our biggest update yet! Castle Wars 1.2 brings new levels, and a completely revamped combat system that will change the way you play."
+      ],
+      "features": {
+        "title": "Update 1.2:",
+        "items": [
+          "5 New Levels: Explore new castles and battlefields.",
+          "Revamped AI System: Experience more dynamic and strategic battles."
+        ]
+      },
+      "footer": "The update is scheduled for release on November 1st!"
+    }
+  ]
+}

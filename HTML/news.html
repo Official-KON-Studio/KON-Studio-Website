@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Updates - KON Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Cinzel:wght@400;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/themes.css">
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/hero.css">
+    <link rel="stylesheet" href="../CSS/homepage.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
+    <link rel="stylesheet" href="../CSS/news.css">
+    <link rel="stylesheet" href="../CSS/support.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body data-theme="classic">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="side-panel" id="sidePanel">
+        <div class="panel-header">
+            <div class="logo-panel">
+                <button class="theme-selector" id="themeSelector">🎨</button>
+                <div class="theme-dropdown" id="themeDropdown">
+                    <div class="theme-option" data-theme="classic">
+                        <span class="theme-name">Classic Retro</span>
+                    </div>
+                    <div class="theme-option" data-theme="light">
+                        <span class="theme-name">Light Mode</span>
+                    </div>
+                    <div class="theme-option" data-theme="dark">
+                        <span class="theme-name">Dark Mode</span>
+                    </div>
+                    <div class="theme-option" data-theme="futuristic">
+                        <span class="theme-name">Futuristic Purple</span>
+                    </div>
+                    <div class="theme-option" data-theme="gold">
+                        <span class="theme-name">Royal Gold</span>
+                    </div>
+                    <div class="theme-option" data-theme="ancient">
+                        <span class="theme-name">Ancient Scroll</span>
+                    </div>
+                </div>
+                <div class="logo-text">KON Studio</div>
+            </div>
+        </div>
+        <ul class="panel-nav">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="news.html" class="nav-link active">News</a></li>
+            <li><a href="support.html" class="nav-link">Support</a></li>
+            <li><a href="index.html#games" class="nav-link">Games</a></li>
+            <li><a href="index.html#about" class="nav-link">About</a></li>
+            <li><a href="index.html#team" class="nav-link">Team</a></li>
+            <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="panel-bottom">
+            <button id="toggleRetro" class="toggle-retro-btn">Retro Off</button>
+        </div>
+    </aside>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-content">
+            <h1>News & Updates</h1>
+            <p>Stay updated with the latest from KON Studio</p>
+        </div>
+    </section>
+
+    <!-- Filter by Category -->
+    <section id="news-filters">
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All News</button>
+            <button class="filter-tab" data-filter="updates">Game Updates</button>
+            <button class="filter-tab" data-filter="announcements">Announcements</button>
+            <button class="filter-tab" data-filter="devblog">Dev Blog</button>
+            <button class="filter-tab" data-filter="milestones">Milestones</button>
+        </div>
+    </section>
+
+    <!-- News Grid (dynamically loaded from JSON) -->
+    <section id="news-section">
+        <div class="news-grid">
+            <!-- News items will be loaded here dynamically -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://kon-studio.itch.io/" title="Itch.io" target="_blank" rel="noopener noreferrer">
+                <img src="../ICONS/itch_93842.png" alt="Itch">
+            </a>
+
+            <a href="https://github.com/Official-KON-Studio" title="GitHub"  target="_blank"  rel="noopener noreferrer"> 
+                <img src="../ICONS/github_logo_icon_143772.png" alt="GH">
+            </a>
+
+            <a href="https://www.youtube.com/@KONstudio.Offical" title="YouTube" target="_blank">
+                <img src="../ICONS/youtube.png" alt="YT">
+            </a>
+
+            <a href="https://www.instagram.com/officialkonstudio/" title="Instagram" target="_blank">
+                <img src="../ICONS/instagram.png" alt="IG">
+            </a>
+        </div>
+        <p>&copy; 2025 KON STUDIO. ALL RIGHTS RESERVED. MADE BY INDIE DEVS.</p>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+    <script src="../JS/news.js"></script>
+</body>
+</html>

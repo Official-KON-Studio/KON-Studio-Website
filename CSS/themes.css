@@ -1,0 +1,100 @@
+/* ==================== THEME VARIABLES ==================== */
+
+/* Classic Theme (Original) */
+body[data-theme="classic"] {
+    --bg-primary: #1f2e41;
+    --bg-secondary: #192939;
+    --bg-card: #1f2e41;
+    --border-primary: #8a1860;
+    --border-secondary: #a96325;
+    --border-tertiary: #d2ad55;
+    --text-primary: #fef250;
+    --text-secondary: #d2ad55;
+    --accent-primary: #8a1860;
+    --accent-secondary: #a96325;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --overlay-opacity: 0.05;
+}
+
+/* Light Theme */
+body[data-theme="light"] {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --border-primary: #2196F3;
+    --border-secondary: #FF9800;
+    --border-tertiary: #9C27B0;
+    --text-primary: #1a237e;
+    --text-secondary: #424242;
+    --accent-primary: #2196F3;
+    --accent-secondary: #FF9800;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --overlay-opacity: 0;
+}
+
+/* Dark Theme */
+body[data-theme="dark"] {
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #1a1a1a;
+    --bg-card: #1a1a1a;
+    --border-primary: #00ff41;
+    --border-secondary: #ff0080;
+    --border-tertiary: #00d4ff;
+    --text-primary: #4c00ae;
+    --text-secondary: #ffffff;
+    --accent-primary: #00ff41;
+    --accent-secondary: #ff0080;
+    --shadow-color: rgba(0, 255, 65, 0.3);
+    --overlay-opacity: 0.03;
+}
+
+/* Futuristic Purple Theme */
+body[data-theme="futuristic"] {
+    --bg-primary: #0f0520;
+    --bg-secondary: #1a0b33;
+    --bg-card: #1a0b33;
+    --border-primary: #9d4edd;
+    --border-secondary: #c77dff;
+    --border-tertiary: #e0aaff;
+    --text-primary: #e0aaff;
+    --text-secondary: #c77dff;
+    --accent-primary: #9d4edd;
+    --accent-secondary: #7b2cbf;
+    --shadow-color: rgba(157, 78, 221, 0.4);
+    --overlay-opacity: 0.04;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Royal Gold Theme */
+body[data-theme="gold"] {
+    --bg-primary: #0b0904;         
+    --bg-secondary: #141006;      
+    --bg-card: #1b1507;          
+    --border-primary: #ffd700;      
+    --border-secondary: #bfa32f;    
+    --border-tertiary: #8c6f1e;    
+    --text-primary: #fff5cc;        
+    --text-secondary: #e6c65b;      
+    --accent-primary: #ffda44;      
+    --accent-secondary: #d4af37;   
+    --shadow-color: rgba(255, 215, 0, 0.2); 
+    --overlay-opacity: 0.06;       
+    font-family: 'Alegreya', serif;
+}
+
+/* Ancient Scroll Theme */
+body[data-theme="ancient"] {
+    --bg-primary: #2c1810;
+    --bg-secondary: #3d2517;
+    --bg-card: #3d2517;
+    --border-primary: #8b4513;
+    --border-secondary: #a0522d;
+    --border-tertiary: #cd853f;
+    --text-primary: #f4e4c1;
+    --text-secondary: #d2b48c;
+    --accent-primary: #8b4513;
+    --accent-secondary: #a0522d;
+    --shadow-color: rgba(139, 69, 19, 0.4);
+    --overlay-opacity: 0.08;
+    font-family: 'Cinzel', serif;
+}

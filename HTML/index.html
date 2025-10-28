@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KON Studio - Indie Game Developers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Cinzel:wght@400;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/base.css">
+    <link rel="stylesheet" href="../CSS/themes.css">
+    <link rel="stylesheet" href="../CSS/navigation.css">
+    <link rel="stylesheet" href="../CSS/hero.css">
+    <link rel="stylesheet" href="../CSS/homepage.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
+    <link rel="stylesheet" href="../CSS/news.css">
+    <link rel="stylesheet" href="../CSS/support.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/responsive.css">
+</head>
+<body data-theme="classic">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button class="scroll-top" id="scrollTop">↑</button>
+
+    <div class="overlay" id="overlay"></div>
+
+    <aside class="side-panel" id="sidePanel">
+        <div class="panel-header">
+            <div class="logo-panel">
+                <button class="theme-selector" id="themeSelector">🎨</button>
+                <div class="theme-dropdown" id="themeDropdown">
+                    <div class="theme-option" data-theme="classic">
+                        <span class="theme-name">Classic Retro</span>
+                    </div>
+                    <div class="theme-option" data-theme="light">
+                        <span class="theme-name">Light Mode</span>
+                    </div>
+                    <div class="theme-option" data-theme="dark">
+                        <span class="theme-name">Dark Mode</span>
+                    </div>
+                    <div class="theme-option" data-theme="futuristic">
+                        <span class="theme-name">Futuristic Purple</span>
+                    </div>
+                    <div class="theme-option" data-theme="gold">
+                        <span class="theme-name">Royal Gold</span>
+                    </div>
+                    <div class="theme-option" data-theme="ancient">
+                        <span class="theme-name">Ancient Scroll</span>
+                    </div>
+                </div>
+                <div class="logo-text">KON Studio</div>
+            </div>
+        </div>
+        <ul class="panel-nav">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="news.html" class="nav-link">News</a></li>
+            <li><a href="support.html" class="nav-link">Support</a></li>
+            <li><a href="#games" class="nav-link">Games</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#team" class="nav-link">Team</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="panel-bottom">
+            <button id="toggleRetro" class="toggle-retro-btn">Retro Off</button>
+        </div>
+    </aside>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-top">
+                <div class="hero-logo-large">
+                    <img src="../LOGOS/Logo.png" alt="KON Studio Logo" style="width: 100%; height: auto;" class="pixelated">
+                </div>
+
+                <h1>CRAFTING PIXEL PERFECT ADVENTURES</h1>
+            </div>
+            <a href="#games" class="cta-button">Explore Our Games</a>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2 class="section-title">Our Games</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <div class="game-image"><img class="game-Art" src="../ART GALLERY/logo.jpg" alt="Castle Wars Logo"></div>
+                <div class="game-info">
+                    <h3>Castle Wars</h3>
+                    <p>An exciting adventure through pixelated worlds. Battle enemies, solve puzzles, and uncover mysteries in this retro-inspired platformer.</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-image"><img class="game-Art" src="../LOGOS/Icon.png" alt="TIC TAC TOE² Logo"></div>
+                <div class="game-info">
+                    <h3>TIC TAC TOE²</h3>
+                    <p>Challenge your friends to a classic game of Tic Tac Toe with a twist. Who will claim victory in this battle of wits?</p>
+                </div>
+            </div>
+            <div class="game-card">
+                <div class="game-image">🚀</div>
+                <div class="game-info">
+                    <h3>Pixel War</h3>
+                    <p>Explore the cosmos in this narrative-driven space adventure. Make choices that matter and discover the secrets of the universe.</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="featured-news">
+        <h2 class="section-title">Latest Update</h2>
+        <div class="featured-container">
+            <div class="featured-content">
+                <div class="featured-info">
+                    <span class="featured-tag">Game Update</span>
+                    <h3>Castle Wars Update 1.2 Coming Soon!</h3>
+                    <p class="featured-date"> October 15, 2025</p>
+                    <p>Get ready for our biggest update yet! Castle Wars 1.2 brings new levels, epic boss battles, and a completely revamped combat system that will change the way you play.<br>
+                        We're also adding the highly requested multiplayer co-op mode, allowing you to team up with friends and tackle dungeons together. Beta testing starts next week for our supporters!<br>
+                        The update includes over 20 new enemy types, 5 new biomes to explore, and a brand new soundtrack featuring 15 original compositions.
+                    </p>
+                </div>
+                <div class="featured-image"><img class="game-Art" src="../ART GALLERY/logo.jpg" alt=""></div>
+            </div>
+            <div class="featured-cta">
+                <p>Stay up to date with all our game announcements and development updates!</p>
+                <a href="news.html" class="cta-button">Read All News</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About KON Studio</h2>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who We Are</h2>
+                    <p>We're a passionate team of indie developers who believe games should be fun, memorable, and meaningful. Founded by gamers, for gamers, we create experiences that we ourselves want to play.<br>
+                    Our mission is to push creative boundaries while maintaining the heart and soul that makes indie games special. Every pixel, every line of code, and every sound effect is crafted with love.</p>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Games Released</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Months Active</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Passion Driven</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <h2 class="section-title">Meet The Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-avatar"><img class="icon" src="../LOGOS/Vinland-saga.png" alt="G"></div>
+                <div class="member-name">GGamer</div>
+                <div class="member-role">Developer, Art Designer</div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><img class="icon" src="../LOGOS/Bongo.png" alt="B"></div>
+                <div class="member-name">Bongo404</div>
+                <div class="member-role">Developer, Art Designer</div>
+            </div>
+            <div class="team-member">
+                <div class="member-avatar"><img class="icon" src="../LOGOS/N.png" alt="N"></div>
+                <div class="member-name">N</div>
+                <div class="member-role">Developer</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <p>Want to collaborate, report a bug, or just say hi? We'd love to hear from you!</p>
+            <a href="https://mail.google.com/mail/official.konstudio@gmail.com" class="cta-button" target="_blank">Contact Us</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://kon-studio.itch.io/" title="Itch.io" target="_blank" rel="noopener noreferrer">
+                <img src="../ICONS/itch_93842.png" alt="Itch">
+            </a>
+
+            <a href="https://github.com/Official-KON-Studio" title="GitHub"  target="_blank"  rel="noopener noreferrer"> 
+                <img src="../ICONS/github_logo_icon_143772.png" alt="GH">
+            </a>
+
+            <a href="https://www.youtube.com/@KONstudio.Offical" title="YouTube" target="_blank">
+                <img src="../ICONS/youtube.png" alt="YT">
+            </a>
+
+            <a href="https://www.instagram.com/officialkonstudio/" title="Instagram" target="_blank">
+                <img src="../ICONS/instagram.png" alt="IG">
+            </a>
+        </div>
+        <p>&copy; 2025 KON STUDIO. ALL RIGHTS RESERVED. MADE BY INDIE DEVS.</p>
+    </footer>
+
+    <script src="../JS/script.js"></script>
+    
+</body>
+</html>
