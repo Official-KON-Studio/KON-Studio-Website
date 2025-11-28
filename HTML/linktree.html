@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KON Studio Linktree</title>
+    <link rel="stylesheet" href="../CSS/tree.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body data-theme="classic">
+    <button class="theme-switcher" onclick="cycleTheme()">🎨</button>
+    
+    <div class="linktree-container">
+        <h1>Welcome to KON Studio</h1>
+        <p>Your gateway to all things KON Studio. Explore our projects, social media, and more!</p>
+        <ul class="link-list">
+            <li><a href="https://konstudio.com" target="_blank">Official Website</a></li>
+            <li><a href="" target="_blank">Steam</a></li>
+            <li><a href="" target="_blank">Itch.io</a></li>
+            <li><a href="" target="_blank">GitHub</a></li>
+            <li><a href="" target="_blank">Discord</a></li>
+            <li><a href="" target="_blank">Instagram</a></li>
+            <li><a href="" target="_blank">YouTube</a></li>
+            <li><a href="" target="_blank">Suropt</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const themes = ['classic', 'light', 'dark', 'futuristic', 'gold', 'ancient'];
+        let currentThemeIndex = 0;
+
+        // Load saved theme from localStorage or default to classic
+        const savedTheme = localStorage.getItem('linktree-theme') || 'classic';
+        currentThemeIndex = themes.indexOf(savedTheme);
+        document.body.setAttribute('data-theme', savedTheme);
+
+        function cycleTheme() {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const newTheme = themes[currentThemeIndex];
+            document.body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('linktree-theme', newTheme);
+        }
+    </script>
+</body>
+</html>
