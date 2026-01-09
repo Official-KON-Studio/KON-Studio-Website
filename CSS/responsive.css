@@ -1,8 +1,26 @@
 /* ==================== RESPONSIVE ==================== */
+
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+
+    section {
+        padding: 2rem 4%;
+        width: 100%;
+        max-width: 100%;
+    }
 
     .hero {
-        padding: 2rem 1rem;
+        padding: 2rem 4%;
+        min-height: 80vh;
     }
 
     .hero-top {
@@ -10,6 +28,7 @@
         align-items: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
+        width: 100%;
     }
 
     .hero-logo-large {
@@ -18,40 +37,32 @@
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: center;
+        letter-spacing: 2px;
+        line-height: 1.2;
     }
 
     .hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
-    .about-content {
-        /* Keep the grid layout */
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 
+    .about-content,
     .featured-content {
         grid-template-columns: 1fr;
-    }
-
-    .featured-container {
-        padding: 1.5rem;
-    }
-
-    .featured-info h3 {
-        font-size: 1.8rem;
-    }
-
-    .featured-image {
-        height: 250px;
-    }
-
-    section {
-        padding: 3rem 5%;
+        gap: 1.5rem;
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+        padding-bottom: 1rem;
+        border-bottom: 4px solid var(--border-primary);
     }
 
     .side-panel {
@@ -68,7 +79,7 @@
 
     .theme-dropdown {
         right: 10px;
-        top: 80px;
+        top: 70px;
         min-width: 180px;
     }
 
@@ -77,26 +88,53 @@
         flex-direction: row;
         overflow-x: auto;
         gap: 1rem;
-        padding: 1rem;
+        padding: 1rem 0;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
     }
 
     .game-card {
-        flex: 0 0 280px;
-        min-width: 280px;
+        flex: 0 0 85%;
+        min-width: 85%;
+        max-width: 350px;
+        scroll-snap-align: center;
+    }
+
+    .game-image {
+        height: 200px;
+    }
+
+    .game-info {
+        padding: 1.5rem;
+    }
+
+    .game-info h3 {
+        font-size: 1.4rem;
+    }
+
+    .game-info p {
+        font-size: 1rem;
     }
 
     .about-container {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .about-content {
         gap: 2rem;
-        grid-template-areas: "title title" "text stats";
-        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "title" 
+            "text" 
+            "stats";
+        grid-template-columns: 1fr;
+    }
+
+    .about-text {
+        grid-area: text;
     }
 
     .about-text h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-bottom: 1rem;
         text-align: center;
         grid-area: title;
@@ -104,11 +142,13 @@
 
     .about-text p {
         font-size: 1rem;
+        line-height: 1.6;
         margin-bottom: 1rem;
-        grid-area: text;
     }
 
     .stats {
+        grid-area: stats;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
@@ -121,53 +161,39 @@
     }
 
     .stat-label {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
-    .stats {
-        grid-template-columns: 1fr;
+    .featured-container {
+        padding: 1.5rem;
     }
 
-    .page-header-content h1 {
-        font-size: 2.5rem;
+    .featured-info h3 {
+        font-size: 1.5rem;
     }
 
-    .filter-tabs {
-        flex-direction: column;
+    .featured-info p {
+        font-size: 1rem;
     }
 
-    .filter-tab {
-        width: 100%;
-    }
-
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .news-item {
-        grid-template-columns: 1fr;
-    }
-
-    .news-date {
-        margin: 0 auto;
-    }
-
-    .support-methods-grid,
-    .other-ways-grid {
-        grid-template-columns: 1fr;
+    .featured-image {
+        height: 200px;
+        font-size: 3rem;
     }
 
     .team-grid {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
 
     .team-member {
         display: grid;
-        grid-template-areas: "photo role" "name name";
-        grid-template-columns: 80px 1fr;
-        gap: 1rem;
+        grid-template-areas: 
+            "photo name"
+            "photo role";
+        grid-template-columns: 90px 1fr;
+        gap: 0.5rem 1rem;
         align-items: center;
         text-align: left;
         padding: 1.5rem;
@@ -182,8 +208,9 @@
 
     .member-name {
         font-size: 1.2rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0;
         grid-area: name;
+        align-self: end;
     }
 
     .member-role {
@@ -191,5 +218,129 @@
         font-weight: 600;
         grid-area: role;
         align-self: start;
+    }
+
+    .contact-container {
+        padding: 2rem;
+    }
+
+    .contact-container p {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .page-header {
+        min-height: 40vh;
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .page-header-content h1 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+
+    .page-header-content p {
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+
+    .filter-tabs {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .filter-tab {
+        width: 100%;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .gallery-image {
+        height: 250px;
+    }
+
+    .news-item {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+    .news-date {
+        margin: 0 auto 1rem;
+    }
+
+    .news-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .news-content p {
+        font-size: 1rem;
+    }
+
+    .support-intro-container {
+        padding: 2rem;
+    }
+
+    .support-intro-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .support-intro-container p {
+        font-size: 1rem;
+    }
+
+    .support-methods-grid,
+    .other-ways-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .support-method,
+    .other-way-item {
+        padding: 2rem;
+    }
+
+    .support-method h3,
+    .other-way-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .thank-you-container {
+        padding: 2rem;
+    }
+
+    .thank-you-container h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle,
+    .scroll-top {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .cta-button {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .game-card {
+        flex: 0 0 90%;
+        min-width: 90%;
     }
 }
