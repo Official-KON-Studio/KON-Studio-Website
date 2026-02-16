@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Art Gallery - KON Studio</title>
+            <link rel="icon" type="image/png" href="../LOGOS/Logo.png">
+    <link rel="apple-touch-icon" href="../LOGOS/Logo.png">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;900&family=Cinzel:wght@400;700;900&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/base.css">
     <link rel="stylesheet" href="../CSS/themes.css">
@@ -17,15 +21,15 @@
     <link rel="stylesheet" href="../CSS/responsive.css">
 </head>
 <body data-theme="classic">
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <button class="scroll-top" id="scrollTop">↑</button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fi fi-rs-bars-staggered"></i></button>
+        <button class="scroll-top" id="scrollTop" aria-label="Scroll to top"><i class="fi fi-ss-up"></i></button>
 
     <div class="overlay" id="overlay"></div>
 
     <aside class="side-panel" id="sidePanel">
         <div class="panel-header">
             <div class="logo-panel">
-                <button class="theme-selector" id="themeSelector">🎨</button>
+                <button class="theme-selector" id="themeSelector" aria-label="Change theme"><i class="fi fi-ss-brush"></i></button>
                 <div class="theme-dropdown" id="themeDropdown">
                     <div class="theme-option" data-theme="classic">
                         <span class="theme-name">Classic Retro</span>
