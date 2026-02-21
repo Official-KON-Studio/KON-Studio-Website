@@ -84,21 +84,20 @@ footer::after {
         transform: scale(0.9);
     }
     
-    .social-links a:active img {
+    .social-links a:active i {
         filter: drop-shadow(0 0 8px var(--text-primary));
     }
 }
 
-.social-links a img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
+.social-links a i {
+    line-height: 1;
+    font-size: 1.7rem;
     transition: all 0.3s ease;
     position: relative;
     z-index: 1;
 }
 
-.social-links a:hover img {
+.social-links a:hover i {
     transform: scale(1.1);
 }
 
@@ -107,6 +106,8 @@ footer::after {
 .social-links a:nth-child(3) { transition-delay: 0.1s; }
 .social-links a:nth-child(4) { transition-delay: 0.15s; }
 .social-links a:nth-child(5) { transition-delay: 0.2s; }
+.social-links a:nth-child(6) { transition-delay: 0.25s; }
+.social-links a:nth-child(7) { transition-delay: 0.3s; }
 
 footer p {
     font-weight: 700;
