@@ -194,20 +194,3 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// ==================== TOGGLE RETRO EFFECT ====================
-const toggleRetroBtn = document.getElementById('toggleRetro');
-
-if (toggleRetroBtn) {
-    let retroEnabled = false;
-
-    // Set initial state
-    document.body.classList.add('no-retro');
-    toggleRetroBtn.textContent = 'Retro Off';
-
-    toggleRetroBtn.addEventListener('click', () => {
-        retroEnabled = !retroEnabled;
-        document.body.classList.toggle('no-retro', !retroEnabled);
-        // FIXED: Changed text to be more consistent
-        toggleRetroBtn.textContent = retroEnabled ? 'Retro On' : 'Retro Off';
-    });
-}

@@ -84,12 +84,14 @@ footer::after {
         transform: scale(0.9);
     }
     
-    .social-links a:active i {
+    .social-links a:active i,
+    .social-links a:active svg {
         filter: drop-shadow(0 0 8px var(--text-primary));
     }
 }
 
-.social-links a i {
+.social-links a i,
+.social-links a svg {
     line-height: 1;
     font-size: 1.7rem;
     transition: all 0.3s ease;
@@ -97,7 +99,14 @@ footer::after {
     z-index: 1;
 }
 
-.social-links a:hover i {
+.social-links a svg {
+    width: 1.7rem;
+    height: 1.7rem;
+    fill: currentColor;
+}
+
+.social-links a:hover i,
+.social-links a:hover svg {
     transform: scale(1.1);
 }
 
