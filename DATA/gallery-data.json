@@ -43,11 +43,18 @@
     {
       "id": 6,
       "category": "environments",
-      "image": "🌆",
-      "title": "Neon City Landscape",
-      "description": "Environment • Neon Nights",
-      "downloadable": true,
-      "isEmoji": true
+      "image": "../ART GALLERY/Paradox-Deck.png",
+      "title": "Paradox Deck Board",
+      "description": "Environment •  Paradox Deck",
+      "downloadable": true
+    }, 
+    {
+      "id": 8,
+      "category": "environments",
+      "image": "../ART GALLERY/Board-Screenshot.png",
+      "title": "Paradox Deck Board Gameplay Screenshot",
+      "description": "Screenshot •  Paradox Deck",
+      "downloadable": true
     }
   ],
   "fanArt": [
