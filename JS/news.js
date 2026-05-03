@@ -21,6 +21,11 @@ function displayNews(newsItems) {
     const newsGrid = document.querySelector('.news-grid');
     newsGrid.innerHTML = '';
 
+    if (!newsItems || newsItems.length === 0) {
+        newsGrid.innerHTML = '<p style="text-align: center; color: var(--text-secondary);">No news posts available yet.</p>';
+        return;
+    }
+
     newsItems.forEach(item => {
         const newsElement = createNewsElement(item);
         newsGrid.appendChild(newsElement);

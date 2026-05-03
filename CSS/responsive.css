@@ -88,15 +88,15 @@
         flex-direction: row;
         overflow-x: auto;
         gap: 1rem;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
     }
 
     .game-card {
-        flex: 0 0 85%;
-        min-width: 85%;
-        max-width: 350px;
+        flex: 0 0 78%;
+        min-width: 78%;
+        max-width: 300px;
         scroll-snap-align: center;
     }
 
@@ -106,7 +106,16 @@
     }
 
     .game-info {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    #games {
+        padding-top: 1.75rem;
+        padding-bottom: 1.75rem;
+    }
+
+    #games .section-title {
+        margin-bottom: 1.75rem;
     }
 
     .game-info h3 {
@@ -341,7 +350,13 @@
     }
 
     .game-card {
-        flex: 0 0 90%;
-        min-width: 90%;
+        flex: 0 0 82%;
+        min-width: 82%;
     }
+
+    .game-image {
+        aspect-ratio: 1 / 1.5;
+        height: auto;
+    }
+
 }

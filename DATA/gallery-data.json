@@ -55,6 +55,14 @@
       "title": "Paradox Deck Board Gameplay Screenshot",
       "description": "Screenshot •  Paradox Deck",
       "downloadable": true
+    },
+    {
+      "id": 9,
+      "category": "characters",
+      "image": "../ART GALLERY/Nation_Sim_Logo.png",
+      "title": "Nation Sim Logo",
+      "description": "Game Icon•  Nation Sim",
+      "downloadable": true
     }
   ],
   "fanArt": [

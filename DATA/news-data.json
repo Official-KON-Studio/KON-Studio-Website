@@ -1,7 +1,30 @@
 {
   "news": [
     {
+      "id": 2,
+      "year": "2026",
+      "date": {
+        "day": "5",
+        "month": "MAY"
+      },
+      "category": "release",
+      "title": "Nation Sim",
+      "tag": "Game Release",
+      "featuredImage": "../ART GALLERY/Nation_Sim_Logo.png",
+      "content": [
+        "We are thrilled to announce the release of our latest game, Nation Sim! Dive into a world of strategy and diplomacy as you build and manage your own nation, from resource management to international relations."
+      ],
+      "features": {
+        "title": "Nation Sim is ready to play:",
+        "items": [
+          "Build and manage your own nation in a deep simulation sandbox."
+        ]
+      },
+      "footer": "The game is out now on itch.io."
+    },
+    {
       "id": 1,
+      "year": "2025",
       "date": {
         "day": "15",
         "month": "OCT"
@@ -9,8 +32,9 @@
       "category": "updates",
       "title": "Castle Wars Update 1.2",
       "tag": "Game Update",
+      "featuredImage": "../ART GALLERY/logo.jpg",
       "content": [
-        "Get ready for our biggest update yet! Castle Wars 1.2 brings new levels, and a completely revamped combat system that will change the way you play."
+        "Get ready for our biggest update yet! Castle Wars 1.2 brings new levels and a completely revamped combat system that will change the way you play."
       ],
       "features": {
         "title": "Update 1.2:",

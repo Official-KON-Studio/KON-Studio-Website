@@ -184,6 +184,26 @@ function setActiveNavByPage() {
 // Run on page load
 setActiveNavByPage();
 
+// ==================== HORIZONTAL GAME SCROLL ====================
+const gamesGrid = document.querySelector('.games-grid');
+
+if (gamesGrid) {
+    gamesGrid.addEventListener('wheel', (e) => {
+        const canScrollHorizontally = gamesGrid.scrollWidth > gamesGrid.clientWidth;
+        const mostlyVerticalWheel = Math.abs(e.deltaY) > Math.abs(e.deltaX);
+
+        if (!canScrollHorizontally || !mostlyVerticalWheel) {
+            return;
+        }
+
+        e.preventDefault();
+        gamesGrid.scrollBy({
+            left: e.deltaY,
+            behavior: 'auto'
+        });
+    }, { passive: false });
+}
+
 // ==================== KEYBOARD ACCESSIBILITY ====================
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
