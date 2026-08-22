@@ -46,23 +46,33 @@
 
 .team-card h2 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-family: 'Orbitron', sans-serif;
     text-align: center;
+    color: var(--text-primary);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0 var(--shadow-color);
 }
 
 .team-title {
     margin: 0;
     color: var(--text-secondary);
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.95rem;
     min-height: 48px;
 }
 
 .team-summary {
     margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.45;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 600;
+    color: var(--text-secondary);
 }
 
 .team-tags {
@@ -73,10 +83,13 @@
 
 .team-tags span {
     font-size: 0.8rem;
-    font-weight: 700;
-    padding: 0.2rem 0.45rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
     border: 2px solid var(--border-tertiary);
     background: var(--bg-secondary);
+    color: var(--text-primary);
 }
 
 .team-connect {
@@ -85,16 +98,23 @@
     gap: 0.5rem;
     text-decoration: none;
     color: var(--text-primary);
-    font-weight: 700;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
     border: 2px solid var(--text-primary);
     background: var(--accent-primary);
+    box-shadow: 3px 3px 0 var(--shadow-color);
     padding: 0.5rem 0.8rem;
     margin-top: auto;
     align-self: flex-start;
+    transition: all 0.2s;
 }
 
 .team-connect:hover {
-    filter: brightness(1.06);
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 var(--border-primary);
+    filter: none;
 }
 
 .team-actions {
