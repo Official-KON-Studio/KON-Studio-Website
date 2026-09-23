@@ -41,10 +41,7 @@ function createNewsElement(item) {
     // Create date section
     const dateDiv = document.createElement('div');
     dateDiv.className = 'news-date';
-    dateDiv.innerHTML = `
-        <span class="news-day">${item.date.day}</span>
-        <span class="news-month">${item.date.month}</span>
-    `;
+    dateDiv.textContent = item.date;
 
     // Create content section
     const contentDiv = document.createElement('div');
@@ -57,40 +54,32 @@ function createNewsElement(item) {
     // Tag
     const tag = document.createElement('span');
     tag.className = 'news-tag';
-    tag.textContent = item.tag;
+    tag.textContent = item.type;
 
     // Add to content
     contentDiv.appendChild(title);
     contentDiv.appendChild(tag);
 
-    // Content paragraphs
-    item.content.forEach(paragraph => {
-        const p = document.createElement('p');
-        p.innerHTML = paragraph;
-        contentDiv.appendChild(p);
-    });
+    // Summary
+    const summary = document.createElement('p');
+    summary.textContent = item.summary;
+    contentDiv.appendChild(summary);
 
     // Features list (if exists)
-    if (item.features) {
-        if (item.features.title) {
-            const featuresTitle = document.createElement('p');
-            featuresTitle.innerHTML = `<strong>${item.features.title}</strong>`;
-            contentDiv.appendChild(featuresTitle);
-        }
-
+    if (item.highlights && item.highlights.length > 0) {
         const ul = document.createElement('ul');
-        item.features.items.forEach(feature => {
+        item.highlights.forEach(feature => {
             const li = document.createElement('li');
-            li.innerHTML = feature;
+            li.textContent = feature;
             ul.appendChild(li);
         });
         contentDiv.appendChild(ul);
     }
 
     // Footer (if exists)
-    if (item.footer) {
+    if (item.status) {
         const footer = document.createElement('p');
-        footer.innerHTML = item.footer;
+        footer.textContent = item.status;
         contentDiv.appendChild(footer);
     }
 

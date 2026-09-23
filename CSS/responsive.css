@@ -52,8 +52,7 @@
         font-size: 1rem;
     }
 
-    .about-content,
-    .featured-content {
+    .about-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
@@ -86,6 +85,7 @@
     .games-grid {
         display: flex;
         flex-direction: row;
+        justify-content: flex-start;
         overflow-x: auto;
         gap: 1rem;
         padding: 0.5rem 0;
@@ -96,7 +96,7 @@
     .game-card {
         flex: 0 0 78%;
         min-width: 78%;
-        max-width: 300px;
+        max-width: 240px;
         scroll-snap-align: center;
     }
 
@@ -110,12 +110,13 @@
     }
 
     #games {
-        padding-top: 1.75rem;
-        padding-bottom: 1.75rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
     #games .section-title {
-        margin-bottom: 1.75rem;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
     }
 
     .game-info h3 {
@@ -175,20 +176,43 @@
     }
 
     .featured-container {
-        padding: 1.5rem;
+        padding: 0.75rem;
     }
 
-    .featured-info h3 {
-        font-size: 1.5rem;
+    #featured-news {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
     }
 
-    .featured-info p {
-        font-size: 1rem;
+    #featured-news .section-title {
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
     }
 
-    .featured-image {
-        height: 200px;
-        font-size: 3rem;
+    .featured-table th,
+    .featured-table td {
+        padding: 0.65rem;
+    }
+
+    .featured-table {
+        min-width: 600px;
+    }
+
+    .featured-table th {
+        font-size: 0.8rem;
+    }
+
+    .featured-table td {
+        font-size: 0.95rem;
+    }
+
+    .featured-table td strong {
+        font-size: 1.1rem;
+    }
+
+    .featured-table .featured-image {
+        width: 100%;
+        height: 100%;
     }
 
     .team-grid {

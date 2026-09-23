@@ -2,48 +2,30 @@
   "news": [
     {
       "id": 2,
-      "year": "2026",
-      "date": {
-        "day": "5",
-        "month": "MAY"
-      },
       "category": "release",
+      "date": "May 5, 2026",
+      "type": "Game Release",
       "title": "Nation Sim",
-      "tag": "Game Release",
-      "featuredImage": "../ART GALLERY/Nation_Sim_Logo.png",
-      "content": [
-        "We are thrilled to announce the release of our latest game, Nation Sim! Dive into a world of strategy and diplomacy as you build and manage your own nation, from resource management to international relations."
+      "summary": "We are thrilled to announce the release of our latest game, Nation Sim! Dive into a world of strategy and diplomacy as you build and manage your own nation.",
+      "highlights": [
+        "Build and manage your own nation in a deep simulation sandbox."
       ],
-      "features": {
-        "title": "Nation Sim is ready to play:",
-        "items": [
-          "Build and manage your own nation in a deep simulation sandbox."
-        ]
-      },
-      "footer": "The game is out now on itch.io."
+      "status": "The game is out now on itch.io.",
+      "image": "../ART GALLERY/Nation_Sim_Logo.png"
     },
     {
       "id": 1,
-      "year": "2025",
-      "date": {
-        "day": "15",
-        "month": "OCT"
-      },
       "category": "updates",
+      "date": "October 15, 2025",
+      "type": "Game Update",
       "title": "Castle Wars Update 1.2",
-      "tag": "Game Update",
-      "featuredImage": "../ART GALLERY/logo.jpg",
-      "content": [
-        "Get ready for our biggest update yet! Castle Wars 1.2 brings new levels and a completely revamped combat system that will change the way you play."
+      "summary": "Get ready for our biggest update yet! Castle Wars 1.2 brings new levels and a completely revamped combat system.",
+      "highlights": [
+        "5 New Levels: Explore new castles and battlefields.",
+        "Revamped AI System: Experience more dynamic and strategic battles."
       ],
-      "features": {
-        "title": "Update 1.2:",
-        "items": [
-          "5 New Levels: Explore new castles and battlefields.",
-          "Revamped AI System: Experience more dynamic and strategic battles."
-        ]
-      },
-      "footer": "The update is scheduled for release on November 1st!"
+      "status": "The update is scheduled for release on November 1st!",
+      "image": "../ART GALLERY/logo.jpg"
     }
   ]
 }

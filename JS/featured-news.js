@@ -1,84 +1,45 @@
-// Load and display featured news on homepage
+// Load and display the latest news item in the homepage table
 async function loadFeaturedNews() {
     try {
         const response = await fetch('../DATA/news-data.json');
         const data = await response.json();
         
-        // Get the first (latest) news item
         if (data.news && data.news.length > 0) {
-            const latestNews = data.news[0];
-            displayFeaturedNews(latestNews);
+            displayFeaturedNews(data.news[0]);
         }
     } catch (error) {
         console.error('Error loading featured news:', error);
-        // Keep the default content if loading fails
+        const tableBody = document.querySelector('#featured-news-body');
+        if (tableBody) {
+            tableBody.innerHTML = '<tr><td colspan="5">Unable to load the latest update.</td></tr>';
+        }
     }
 }
 
-// Display the featured news
+// Display one news item as a table row
 function displayFeaturedNews(newsItem) {
-    // Update tag
-    const tagElement = document.querySelector('.featured-tag');
-    if (tagElement) {
-        tagElement.textContent = newsItem.tag;
-    }
+    const tableBody = document.querySelector('#featured-news-body');
+    if (!tableBody) return;
 
-    // Update title
-    const titleElement = document.querySelector('.featured-info h3');
-    if (titleElement) {
-        titleElement.textContent = newsItem.title;
-    }
-
-    // Update date
-    const dateElement = document.querySelector('.featured-date');
-    if (dateElement) {
-        const monthNames = {
-            'JAN': 'January', 'FEB': 'February', 'MAR': 'March',
-            'APR': 'April', 'MAY': 'May', 'JUN': 'June',
-            'JUL': 'July', 'AUG': 'August', 'SEP': 'September',
-            'OCT': 'October', 'NOV': 'November', 'DEC': 'December'
-        };
-        const monthKey = String(newsItem.date.month || '').toUpperCase();
-        const monthFull = monthNames[monthKey] || newsItem.date.month;
-        const newsYear = newsItem.year || '2026';
-        dateElement.textContent = `${monthFull} ${newsItem.date.day}, ${newsYear}`;
-    }
-
-    const summaryElement = document.querySelector('.featured-summary');
-    if (summaryElement && newsItem.content && newsItem.content.length > 0) {
-        summaryElement.textContent = newsItem.content[0];
-    }
-
-    const highlightsTitleElement = document.querySelector('.featured-highlights-title');
-    if (highlightsTitleElement && newsItem.features && newsItem.features.title) {
-        highlightsTitleElement.textContent = newsItem.features.title;
-    }
-
-    const highlightsListElement = document.querySelector('.featured-highlights-list');
-    if (highlightsListElement) {
-        highlightsListElement.innerHTML = '';
-
-        if (newsItem.features && Array.isArray(newsItem.features.items)) {
-            newsItem.features.items.slice(0, 3).forEach(feature => {
-                const li = document.createElement('li');
-                li.textContent = feature.replace(/<[^>]*>/g, '');
-                highlightsListElement.appendChild(li);
-            });
-        }
-    }
-
-    const footerElement = document.querySelector('.featured-footer');
-    if (footerElement && newsItem.footer) {
-        footerElement.textContent = newsItem.footer;
-    }
-
-    const imageElement = document.querySelector('.featured-image img');
-    if (imageElement) {
-        if (newsItem.featuredImage) {
-            imageElement.src = newsItem.featuredImage;
-        }
-        imageElement.alt = newsItem.title;
-    }
+    const highlights = (newsItem.highlights || []).map(highlight => `<li>${highlight}</li>`).join('');
+    tableBody.innerHTML = `
+        <tr>
+            <td data-label="Date / Type" class="featured-meta">
+                <time datetime="${newsItem.date}">${newsItem.date}</time>
+                <span class="featured-tag">${newsItem.type}</span>
+            </td>
+            <td data-label="Update / Details" class="featured-content-cell">
+                <strong>${newsItem.title}</strong>
+                <p>${newsItem.summary}</p>
+                <ul class="featured-highlights-list">${highlights}</ul>
+                <p class="featured-footer">${newsItem.status}</p>
+            </td>
+            <td data-label="Artwork" class="featured-artwork-cell">
+                <div class="featured-artwork-frame">
+                    <img class="featured-image" src="${newsItem.image}" alt="${newsItem.title} artwork">
+                </div>
+            </td>
+        </tr>`;
 }
 
 // Initialize when DOM is loaded
