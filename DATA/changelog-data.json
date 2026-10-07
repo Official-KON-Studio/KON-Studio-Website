@@ -1,0 +1,38 @@
+{
+  "changelog": [
+    {
+      "id": "nationsim-1-1-0",
+      "game": "NationSim",
+      "version": "1.1",
+      "title": "Resources, reserves and new infrastructure",
+      "date": "2026-10-01",
+      "added": [
+        "New resources: Fuel, Raw Materials, Steel, and Luxury Goods.",
+        "Shortages now cause traffic, lower employment, and drops in approval and happiness.",
+        "Currency Reserves, tracked separately from your treasury based on net performance after loan payments.",
+        "Low reserves hurt national stability and trigger critical warnings.",
+        "4 new infrastructure projects: Oil Refineries, Mining Complexes, Steel Mills, and Luxury Districts. Each has upfront and maintenance costs."
+      ],
+      "changed": [
+        "Nations can now hold a maximum of 3 active loans at a time.",
+        "Resources page redesigned with individual resource cards and a highlighted Currency Reserve panel.",
+        "Budget page redesigned with responsive tax and department cards, spending summaries, and visual surplus/deficit projections."
+      ],
+      "fixed": [],
+      "known_issues": []
+    },
+    {
+      "id": "nationsim-1-0-0",
+      "game": "NationSim",
+      "version": "1.0",
+      "title": "Initial release",
+      "date": "2025-10-01",
+      "added": [
+        "Build and manage your own nation in a deep simulation sandbox."
+      ],
+      "changed": [],
+      "fixed": [],
+      "known_issues": []
+    }
+  ]
+}

@@ -30,27 +30,47 @@
 }
 
 .news-date {
-    background: var(--accent-primary);
-    border: 4px solid var(--text-primary);
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 92px;
+    padding: 0;
+    overflow: hidden;
     text-align: center;
-    min-width: 100px;
+    background: var(--bg-primary);
+    border: 4px solid var(--text-primary);
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    transition: all 0.2s;
 }
 
 .news-day {
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--text-primary);
     display: block;
+    padding: 0.5rem 0.5rem 0.6rem;
+    font-size: 3rem;
+    font-weight: 900;
     line-height: 1;
+    color: var(--text-primary);
 }
 
 .news-month {
-    font-size: 1.1rem;
-    font-weight: 900;
+    order: -1;
+    display: block;
+    padding: 0.35rem 0.5rem;
+    background: var(--accent-primary);
     color: var(--text-primary);
+    border-bottom: 4px solid var(--text-primary);
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    letter-spacing: 1px;
+}
+
+.news-year {
+    display: block;
+    padding-bottom: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--text-secondary);
 }
 
 .news-content h3 {
@@ -93,4 +113,32 @@
     margin-bottom: 0.5rem;
     font-weight: 600;
     line-height: 1.6;
+}
+
+.news-item:hover .news-date {
+    background: var(--accent-secondary);
+    box-shadow: 4px 4px 0 var(--text-primary);
+}
+
+/* Mobile: put the date in a compact horizontal bar */
+@media (max-width: 600px) {
+    .news-item {
+        grid-template-columns: 1fr;
+    }
+    .news-date {
+        flex-direction: row;
+        align-items: stretch;
+        width: fit-content;
+    }
+    .news-month {
+        order: 0;
+        border-bottom: 0;
+        border-right: 4px solid var(--text-primary);
+        display: flex;
+        align-items: center;
+    }
+    .news-day {
+        font-size: 2rem;
+        padding: 0.4rem 1rem;
+    }
 }
