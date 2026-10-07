@@ -1,6 +1,21 @@
 {
   "news": [
     {
+      "id": 3,
+      "category": "updates",
+      "date": "September 29, 2026",
+      "type": "Game Update",
+      "title": "Nation Sim Update 1.1",
+      "summary": "Introducing new resources, currency reserves tracking, and expanded infrastructure to support your growing nation.",
+      "highlights": [
+        "New resources: Fuel, Raw Materials, Steel, and Luxury Goods.",
+        "4 new infrastructure projects: Oil Refineries, Mining Complexes, Steel Mills, and Luxury Districts.",
+        "Nations can now hold a maximum of 3 active loans at a time."
+      ] ,
+      "status": "The update is live now on itch.io.",
+      "image":"../ART GALLERY/Nation_Sim_Logo.png"
+    },
+    {
       "id": 2,
       "category": "release",
       "date": "May 5, 2026",

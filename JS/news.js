@@ -32,6 +32,14 @@ function displayNews(newsItems) {
     });
 }
 
+// Parses "2025-10-01" as a local date (avoids timezone off-by-one),
+// and falls back to the browser's parser for strings like "October 1, 2025"
+function parseDate(str) {
+    const iso = /^(\d{4})-(\d{2})-(\d{2})/.exec(str);
+    if (iso) return new Date(+iso[1], +iso[2] - 1, +iso[3]);
+    return new Date(str);
+}
+
 // Create a news item element
 function createNewsElement(item) {
     const newsItem = document.createElement('div');
@@ -39,9 +47,29 @@ function createNewsElement(item) {
     newsItem.setAttribute('data-category', item.category);
 
     // Create date section
-    const dateDiv = document.createElement('div');
-    dateDiv.className = 'news-date';
+const dateDiv = document.createElement('div');
+dateDiv.className = 'news-date';
+
+const d = parseDate(item.date);
+
+if (isNaN(d)) {
+    // Fallback: show the raw string if it can't be parsed
     dateDiv.textContent = item.date;
+} else {
+    const month = document.createElement('span');
+    month.className = 'news-month';
+    month.textContent = d.toLocaleString('en', { month: 'short' }); // "Oct" (CSS uppercases it)
+
+    const day = document.createElement('span');
+    day.className = 'news-day';
+    day.textContent = String(d.getDate()).padStart(2, '0');
+
+    const year = document.createElement('span');
+    year.className = 'news-year';
+    year.textContent = d.getFullYear();
+
+    dateDiv.append(month, day, year);
+}
 
     // Create content section
     const contentDiv = document.createElement('div');
