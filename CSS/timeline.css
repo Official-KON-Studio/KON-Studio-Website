@@ -1,0 +1,141 @@
+/* ==================== TIMELINE MAP ==================== */
+#timeline-section { background: var(--bg-primary); padding: 3rem 5% 7rem; }
+
+.map {
+    --bird: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 30'%3E%3Cpath d='M4 22Q22 0 40 18Q58 0 76 22' fill='none' stroke='black' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+    --cloud: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Cpath d='M44 90C18 90 6 70 22 57C24 40 46 34 60 44C66 20 102 12 124 30C138 16 168 24 172 46C196 46 202 72 182 82C178 90 170 90 160 90Z'/%3E%3C/svg%3E");
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 5px solid var(--border-tertiary);
+    box-shadow: 6px 6px 0 var(--shadow-color);
+    background-image: radial-gradient(circle, color-mix(in srgb, var(--text-secondary) 22%, transparent) 2px, transparent 3px);
+    background-size: 36px 36px;
+}
+.map svg { position: absolute; top: 0; left: 0; pointer-events: none; }
+
+/* Dotted trail with marching dots, solid fill where the avatar has walked */
+.trail { fill: none; stroke: var(--text-secondary); stroke-width: 6; stroke-linecap: round; stroke-dasharray: 1 16; animation: march 1.2s linear infinite; }
+.trail.fut { opacity: .35; }
+@keyframes march { to { stroke-dashoffset: -34; } }
+.walked { fill: none; stroke: var(--accent-primary); stroke-width: 9; }
+.arrow { fill: var(--text-primary); }
+
+/* Stops */
+.node {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 64px; height: 64px;
+    padding: 0;
+    background: var(--bg-card);
+    border: 5px solid var(--border-tertiary);
+    box-shadow: 4px 4px 0 var(--shadow-color);
+    color: var(--text-primary);
+    font: 900 26px/1 'Barlow', sans-serif;
+    cursor: pointer;
+    transition: transform .15s, background .2s;
+}
+.node:hover, .node:focus-visible { transform: translate(-50%, -50%) scale(1.1); outline: none; border-color: var(--text-primary); }
+.node.on { background: var(--accent-primary); }
+.node.future { border-style: dashed; opacity: .85; animation: glow 2.4s ease-in-out infinite; }
+@keyframes glow { 50% { box-shadow: 4px 4px 0 var(--shadow-color), 0 0 0 12px color-mix(in srgb, var(--accent-primary) 35%, transparent); } }
+
+.nlabel {
+    position: absolute;
+    top: calc(100% + 14px); left: 50%;
+    transform: translateX(-50%);
+    width: max-content; max-width: 150px;
+    padding: .3rem .6rem;
+    background: var(--bg-card);
+    border: 3px solid var(--border-tertiary);
+    font-size: .85rem; line-height: 1.25; text-align: center;
+    color: var(--text-primary);
+    pointer-events: none;
+}
+.nlabel b { display: block; font-weight: 900; }
+.nlabel i { display: block; font-style: normal; font-weight: 600; font-size: .78rem; color: var(--text-secondary); }
+
+/* Avatar */
+.avatar {
+    position: absolute; top: 0; left: 0;
+    width: 30px; height: 30px;
+    margin: -66px 0 0 -15px;
+    background: var(--text-primary);
+    border: 4px solid var(--border-tertiary);
+    pointer-events: none; z-index: 3;
+    animation: bob .6s steps(2) infinite;
+}
+.avatar::before, .avatar::after { content: ""; position: absolute; top: 7px; width: 5px; height: 5px; background: var(--bg-primary); }
+.avatar::before { left: 4px; }
+.avatar::after { right: 4px; }
+@keyframes bob { 50% { margin-top: -70px; } }
+
+/* Drifting clouds: a real cloud silhouette used as a mask, so it takes the theme color */
+.cloud {
+    position: absolute; left: -260px;
+    width: 180px; aspect-ratio: 2 / 1;
+    background: color-mix(in srgb, var(--text-secondary) 20%, transparent);
+    -webkit-mask: var(--cloud) center / contain no-repeat;
+    mask: var(--cloud) center / contain no-repeat;
+    animation: drift 70s linear infinite;
+    pointer-events: none;
+}
+.cloud:nth-of-type(2) { width: 120px; animation-duration: 55s; }
+.cloud:nth-of-type(3) { width: 240px; animation-duration: 90s; }
+@keyframes drift { to { transform: translateX(1300px); } }
+
+/* Background scenery */
+.d.patch { opacity: .07; }
+.d.rock { opacity: .16; }
+.d { fill: var(--text-secondary); color: var(--text-secondary); opacity: .2; }
+.d .snow { fill: var(--bg-primary); }
+.d.pond ellipse, .d.pond path { fill: none; stroke: var(--text-secondary); stroke-width: 4; stroke-linecap: round; }
+.d.pond .ripple { stroke-dasharray: 14 10; animation: flow 3s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -48; } }
+.d.pine .in, .d.bush .in, .d.flower .in { transform-box: fill-box; transform-origin: 50% 100%; animation: sway 4s ease-in-out infinite alternate; }
+@keyframes sway { from { transform: rotate(-3deg); } to { transform: rotate(3deg); } }
+
+/* Birds crossing the map */
+.bird {
+    position: absolute; left: -60px;
+    width: 36px; aspect-ratio: 80 / 30;
+    background: var(--text-secondary); opacity: .4;
+    -webkit-mask: var(--bird) center / contain no-repeat;
+    mask: var(--bird) center / contain no-repeat;
+    animation: fly 45s linear infinite, flap .45s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+@keyframes fly { to { translate: 1100px -70px; } }
+@keyframes flap { to { transform: scaleY(.55); } }
+
+/* Edit mode */
+.editbar { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 60; display: flex; gap: .7rem; align-items: center; flex-wrap: wrap; width: min(92%, 700px); padding: .8rem 1rem; background: var(--bg-card); border: 4px solid var(--text-primary); color: var(--text-primary); font-weight: 700; }
+.editbar button { padding: .45rem 1rem; background: var(--accent-primary); color: var(--text-primary); border: 3px solid var(--text-primary); font-weight: 900; cursor: pointer; }
+body:has(.editbar) .d { pointer-events: all; cursor: grab; }
+.d.sel { opacity: .6; filter: drop-shadow(0 0 4px var(--accent-primary)); }
+body:has(.editbar) .node { cursor: grab; touch-action: none; border-style: dashed; }
+
+/* Info panel */
+.panel {
+    position: fixed; left: 50%; bottom: 20px; z-index: 50;
+    width: min(92%, 620px);
+    max-height: 60vh; overflow: auto;
+    padding: 1.3rem 1.5rem 1.5rem;
+    background: var(--bg-card);
+    border: 5px solid var(--text-primary);
+    box-shadow: 8px 8px 0 var(--border-primary);
+    transform: translate(-50%, 170%);
+    transition: transform .3s;
+}
+.panel.open { transform: translate(-50%, 0); }
+.ptag { display: inline-block; padding: .2rem .7rem; background: var(--accent-secondary); color: var(--text-primary); border: 3px solid var(--text-primary); font-weight: 900; font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; }
+.panel h3 { margin: .7rem 0 .2rem; color: var(--text-primary); font-size: 1.6rem; font-weight: 900; }
+.pdate { display: block; margin-bottom: .6rem; color: var(--text-secondary); font-weight: 700; }
+.panel p { margin: 0 0 1rem; color: var(--text-secondary); font-weight: 600; line-height: 1.6; }
+.pbtn { display: inline-block; padding: .55rem 1.1rem; background: var(--accent-primary); color: var(--text-primary); border: 4px solid var(--text-primary); font-weight: 900; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; }
+.pclose { position: absolute; top: 10px; right: 10px; width: 34px; height: 34px; background: var(--accent-primary); color: var(--text-primary); border: 3px solid var(--text-primary); font: 900 20px/1 sans-serif; cursor: pointer; }
+.tl-empty { padding: 2rem; text-align: center; color: var(--text-secondary); font-weight: 600; }
+
+@media (max-width: 600px) { .nlabel { max-width: 120px; } }
+@media (prefers-reduced-motion: reduce) { .trail, .cloud, .bird, .avatar, .node.future, .d .in, .d .ripple { animation: none; } }

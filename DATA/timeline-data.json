@@ -1,0 +1,106 @@
+{
+  "timeline": [
+    {
+      "type": "founded",
+      "date": "2025-01-01",
+      "title": "KON Studio is founded",
+      "text": "Where it all began: a small indie team with big ideas.",
+      "x": 21.8,
+      "y": 149
+    },
+    {
+      "type": "release",
+      "date": "2025-10-23",
+      "title": "Castle Wars",
+      "text": "First game ever. A real-time strategy game where you command an army of castles to conquer enemy territories.",
+      "link": {
+        "href": "https://kon-studio.itch.io/",
+        "label": "Play on itch.io"
+      },
+      "x": 77.5,
+      "y": 273
+    },
+    {
+      "type": "release",
+      "date": "2025-12-01",
+      "title": "TicTacToe²",
+      "text": "Tic Tac Toe² takes the beloved grid-within-a-grid concept and supercharges it.",
+      "link": {
+        "href": "https://kon-studio.itch.io/",
+        "label": "Play on itch.io"
+      },
+      "x": 21.3,
+      "y": 432
+    },
+    {
+      "type": "release",
+      "date": "2026-10-01",
+      "title": "NationSim 1.0",
+      "text": "Nation Simulator. Build and manage your own nation in a deep simulation sandbox.",
+      "link": {
+        "href": "https://kon-studio.itch.io/",
+        "label": "Play on itch.io"
+      },
+      "x": 70.8,
+      "y": 888
+    },
+    {
+      "type": "update",
+      "date": "2026-10-01",
+      "title": "NationSim Update 1.1",
+      "text": "New resources and shortages, Currency Reserves, four new infrastructure projects and redesigned Resources and Budget pages.",
+      "link": {
+        "href": "changelog.html#nationsim-1-1-0",
+        "label": "Read the patch notes"
+      },
+      "x": 25,
+      "y": 1096
+    },
+    {
+      "type": "future",
+      "date": "Soon",
+      "title": "The next adventure",
+      "text": "Something new is on the way. Stay tuned!",
+      "x": 71.8,
+      "y": 1309
+    }
+  ],
+  "scenery": [
+    {
+      "type": "pine",
+      "x": 6,
+      "y": 1271,
+      "s": 1
+    },
+    {
+      "type": "pine",
+      "x": 12.9,
+      "y": 1268,
+      "s": 1
+    },
+    {
+      "type": "bush",
+      "x": 22,
+      "y": 1305,
+      "s": 1
+    },
+    {
+      "type": "flower",
+      "x": 9.6,
+      "y": 1295,
+      "s": 1
+    },
+    {
+      "type": "bush",
+      "x": 2.7,
+      "y": 1301,
+      "s": 1
+    },
+    {
+      "type": "pine",
+      "x": 19,
+      "y": 1276,
+      "s": 0.87
+    }
+  ]
+}
